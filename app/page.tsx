@@ -4,7 +4,7 @@ import { ShortenURLForm } from "@/components/home";
 import { useShortenUrl } from "@/api/endpoints/shorten";
 
 export default function Home() {
-	const { mutate, isPending, isSuccess } = useShortenUrl();
+	const { mutate, isPending } = useShortenUrl();
 
 	return (
 		<div className="flex flex-col gap-8">

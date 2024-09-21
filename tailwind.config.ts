@@ -11,6 +11,8 @@ const config: Config = {
 		extend: {
 			animation: {
 				fade: "fadeIn .2s ease-in-out",
+				spin: "spin 1s linear infinite",
+				// if you plan on using more animations, add them here
 			},
 			colors: {
 				background: "var(--background)",
@@ -29,11 +31,15 @@ const config: Config = {
 					DEFAULT: "#000080",
 				},
 			},
-		},
-		keyframes: {
-			fadeIn: {
-				from: { opacity: "0" },
-				to: { opacity: "1" },
+			keyframes: {
+				fadeIn: {
+					from: { opacity: "0" },
+					to: { opacity: "1" },
+				},
+				spin: {
+					from: { transform: "rotate(0deg)" },
+					to: { transform: "rotate(360deg)" },
+				},
 			},
 		},
 	},
