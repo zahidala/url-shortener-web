@@ -2,15 +2,19 @@ import { MutationOptions } from "@/api/types";
 import { useAxios } from "@/api/hooks/useAxios";
 import { useMutation } from "@tanstack/react-query";
 
-interface ShortenUrlBody {
+interface Body {
 	url: string;
 }
 
-export function useShortenUrl(options?: MutationOptions<void, ShortenUrlBody>) {
+interface Response {
+	shortUrl: string;
+}
+
+export function useShortenUrl(options?: MutationOptions<Response, Body>) {
 	const client = useAxios();
 	const mutationKey = ["shorten-url"];
 
-	const mutationFn = async (body: ShortenUrlBody) => {
+	const mutationFn = async (body: Body) => {
 		const { data: response } = await client.post("/shorten", body);
 		return response?.data;
 	};
