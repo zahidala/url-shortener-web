@@ -12,7 +12,7 @@ interface Response {
 
 export function useShortenUrl(options?: MutationOptions<Response, Body>) {
 	const client = useAxios();
-	const mutationKey = ["shorten-url"];
+	const mutationKey = ["shorten", "shorten-url"];
 
 	const mutationFn = async (body: Body) => {
 		const { data: response } = await client.post("/shorten", body);
