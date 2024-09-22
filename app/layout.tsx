@@ -14,6 +14,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<link
+					crossOrigin="anonymous"
+					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+					integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+					referrerPolicy="no-referrer"
+					rel="stylesheet"
+				/>
+			</head>
 			<body className="bg-gradient-to-r from-cyan-500 to-blue-500">
 				<Providers>
 					<main className="p-5">{children}</main>
