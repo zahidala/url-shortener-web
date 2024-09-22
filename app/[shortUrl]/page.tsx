@@ -8,7 +8,7 @@ export default async function ShortUrl({ params: { shortUrl } }: { params: { sho
 	});
 
 	if (!urlCheck.ok) {
-		return redirect("/");
+		return redirect("/?not-found=true");
 	}
 
 	return redirect(`${process.env.API_URL}/${shortUrl}`);
