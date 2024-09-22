@@ -13,13 +13,15 @@ export const Alert = (props: AlertProps) => {
 	const [show, setShow] = useState(visible);
 
 	useEffect(() => {
-		if (visible) {
-			setShow(true);
-			const timer = setTimeout(() => {
-				setShow(false);
-			}, duration);
-			return () => clearTimeout(timer);
-		}
+		if (!visible) return;
+
+		setShow(true);
+
+		const timer = setTimeout(() => {
+			setShow(false);
+		}, duration);
+
+		return () => clearTimeout(timer);
 	}, [visible, duration]);
 
 	return (
