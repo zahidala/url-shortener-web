@@ -15,7 +15,7 @@ export const ShortenedURLCard = (props: ShortenedURLCardProps) => {
 	return (
 		<>
 			<Alert
-				icon={<i className="fa-solid fa-check text-green-500" />}
+				icon={<i className="fa-solid fa-circle-check text-green-500" />}
 				message="Copied to clipboard"
 				visible={showAlert}
 			/>
