@@ -1,4 +1,4 @@
-import { Spinner } from "../global";
+import { Spinner } from "@/components/global";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import isURL from "validator/lib/isURL";
