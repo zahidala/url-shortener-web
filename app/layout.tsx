@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Navbar } from "@/components/layout";
 import { Providers } from "@/providers/Providers";
 import type { Metadata } from "next";
 
@@ -23,8 +24,9 @@ export default function RootLayout({
 					rel="stylesheet"
 				/>
 			</head>
-			<body className="bg-gradient-to-r from-cyan-500 to-blue-500">
+			<body className="bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col gap-4">
 				<Providers>
+					<Navbar />
 					<main className="p-5">{children}</main>
 				</Providers>
 			</body>
